@@ -1,0 +1,76 @@
+#!/bin/bash
+# Mintain - Small bash script for Linux maintenance (updating and cleaning).
+# Commands include: update, upgrade, dist-upgrade, update-grub, autoremove, autoclean, 
+#                   empty-trash, clean.
+# dist-upgrade will prompt (y/n), abort if not sure.
+
+
+RED="\033[1;31m"
+GREEN="\033[1;32m"
+NOCOLOR="\033[0m"
+
+clear
+echo 
+echo "#################################"
+echo "#  Maintain your linux system   #"
+echo "#  and do clean-up afterwards.  #"
+echo "#  Made with/for Linux Mint 18  #"
+echo "#  Will work for other distros  #"
+echo "#################################"
+
+sleep 0.5
+echo 
+read -n 1 -s -p "Press any key to continue.. "
+clear
+
+
+#Com1
+echo -e "Command 1: ${GREEN}update.. ${NOCOLOR}"
+sudo apt-get update
+echo
+
+#Com2
+echo -e "Command 2: ${GREEN}upgrade.. ${NOCOLOR}"
+sudo apt-get upgrade
+echo
+
+#Com3
+echo -e "Command 3: ${GREEN}dist-upgrade..  (abort if not sure)${NOCOLOR}"
+sudo apt-get dist-upgrade
+echo
+
+#Com4
+echo -e "Command 4: ${GREEN}update-grub.. ${NOCOLOR}"
+sudo update-grub2
+echo
+
+#Com5
+echo -e "Command 5: ${GREEN}autoremove.. ${NOCOLOR}"
+sudo apt-get autoremove
+echo
+
+#Com6
+echo -e "Command 6: ${GREEN}autoclean.. ${NOCOLOR}"
+sudo apt-get autoclean
+echo
+
+#Com7
+echo -e "Command 7: ${GREEN}empty trash..  (doesn't always happen)${NOCOLOR}"
+sudo trash-empty
+echo
+
+#Com8
+echo -e "Command 8: ${GREEN}clean.. ${NOCOLOR}"
+sudo apt-get clean
+echo
+
+#done and done
+echo -e "      Done ${GREEN}and Done. >>> All Systems Go. ${NOCOLOR}"
+sleep 2
+echo
+
+#return prompt
+echo -e "           ${GREEN}Heres your prompt.. ${NOCOLOR}"
+sleep 1
+echo
+
