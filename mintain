@@ -25,42 +25,48 @@ clear
 
 
 #Com1
-echo -e "Command 1: ${GREEN}update.. ${NOCOLOR}"
+echo -e "Command 1: ${GREEN}update ${NOCOLOR}"
 sudo apt-get update
 echo
 
 #Com2
-echo -e "Command 2: ${GREEN}upgrade.. ${NOCOLOR}"
+echo -e "Command 2: ${GREEN}upgrade ${NOCOLOR}"
 sudo apt-get upgrade
 echo
 
 #Com3
-echo -e "Command 3: ${GREEN}dist-upgrade..  (abort if not sure)${NOCOLOR}"
-sudo apt-get dist-upgrade
+echo -e "Command 3: ${GREEN}dist-upgrade  (abort if not sure)${NOCOLOR}"
+
+read -p "           Run dist-upgrade? (y/n) " -n 1 -r
+echo
+  if [[ $REPLY =~ ^[Yy]$ ]]
+  then
+  sudo apt-get dist-upgrade
+  fi
 echo
 
 #Com4
-echo -e "Command 4: ${GREEN}update-grub.. ${NOCOLOR}"
+echo -e "Command 4: ${GREEN}update-grub ${NOCOLOR}"
 sudo update-grub2
 echo
 
 #Com5
-echo -e "Command 5: ${GREEN}autoremove.. ${NOCOLOR}"
+echo -e "Command 5: ${GREEN}autoremove ${NOCOLOR}"
 sudo apt-get autoremove
 echo
 
 #Com6
-echo -e "Command 6: ${GREEN}autoclean.. ${NOCOLOR}"
+echo -e "Command 6: ${GREEN}autoclean ${NOCOLOR}"
 sudo apt-get autoclean
 echo
 
 #Com7
-echo -e "Command 7: ${GREEN}empty trash..  (doesn't always happen)${NOCOLOR}"
+echo -e "Command 7: ${GREEN}empty trash ${NOCOLOR}"
 sudo trash-empty
 echo
 
 #Com8
-echo -e "Command 8: ${GREEN}clean.. ${NOCOLOR}"
+echo -e "Command 8: ${GREEN}clean ${NOCOLOR}"
 sudo apt-get clean
 echo
 
@@ -70,7 +76,7 @@ sleep 2
 echo
 
 #return prompt
-echo -e "           ${GREEN}Heres your prompt.. ${NOCOLOR}"
+echo -e "           ${GREEN}Here's your prompt.. ${NOCOLOR}"
 sleep 1
 echo
 
