@@ -8,6 +8,8 @@
 RED="\033[1;31m"
 GREEN="\033[1;32m"
 NOCOLOR="\033[0m"
+BOLD="\033[1m"
+
 
 clear
 echo 
@@ -25,17 +27,17 @@ clear
 
 
 #com1
-echo -e "Command 1: ${GREEN}update ${NOCOLOR}"
+echo -e "${BOLD}Command 1: ${GREEN}update ${NOCOLOR}"
 sudo apt-get update
 echo
 
 #com2
-echo -e "Command 2: ${GREEN}upgrade ${NOCOLOR}"
+echo -e "${BOLD}Command 2: ${GREEN}upgrade ${NOCOLOR}"
 sudo apt-get upgrade
 echo
 
 #com3
-echo -e "Command 3: ${GREEN}dist-upgrade  (abort if not sure) ${NOCOLOR}"
+echo -e "${BOLD}Command 3: ${GREEN}dist-upgrade  (abort if not sure) ${NOCOLOR}"
 
 read -p "           Run dist-upgrade? (y/n) " -n 1 -r
 echo
@@ -46,32 +48,32 @@ echo
 echo
 
 #com4
-echo -e "Command 4: ${GREEN}update-grub ${NOCOLOR}"
+echo -e "${BOLD}Command 4: ${GREEN}update-grub ${NOCOLOR}"
 sudo update-grub2
 echo
 
 #com5
-echo -e "Command 5: ${GREEN}autoremove ${NOCOLOR}"
+echo -e "${BOLD}Command 5: ${GREEN}autoremove ${NOCOLOR}"
 sudo apt-get autoremove
 echo
 
 #com6
-echo -e "Command 6: ${GREEN}autoclean ${NOCOLOR}"
+echo -e "${BOLD}Command 6: ${GREEN}autoclean ${NOCOLOR}"
 sudo apt-get autoclean
 echo
 
 #com7
-echo -e "Command 7: ${GREEN}empty trash ${NOCOLOR}"
+echo -e "${BOLD}Command 7: ${GREEN}empty trash ${NOCOLOR}"
 sudo trash-empty
 echo
 
 #com8
-echo -e "Command 8: ${GREEN}clean ${NOCOLOR}"
+echo -e "${BOLD}Command 8: ${GREEN}clean ${NOCOLOR}"
 sudo apt-get clean
 echo
 
 #done
-echo -e "      Done ${GREEN}and Done.${NOCOLOR} >>> ${RED}All Systems Go. ${NOCOLOR}"
+echo -e "${BOLD}      Done ${GREEN}and Done.${NOCOLOR} >>> ${RED}All Systems Go. ${NOCOLOR}"
 echo
 echo
 sleep 1.5
