@@ -24,18 +24,18 @@ read -n 1 -s -p "Press any key to continue.. "
 clear
 
 
-#Com1
+#com1
 echo -e "Command 1: ${GREEN}update ${NOCOLOR}"
 sudo apt-get update
 echo
 
-#Com2
+#com2
 echo -e "Command 2: ${GREEN}upgrade ${NOCOLOR}"
 sudo apt-get upgrade
 echo
 
-#Com3
-echo -e "Command 3: ${GREEN}dist-upgrade  (abort if not sure)${NOCOLOR}"
+#com3
+echo -e "Command 3: ${GREEN}dist-upgrade  (abort if not sure) ${NOCOLOR}"
 
 read -p "           Run dist-upgrade? (y/n) " -n 1 -r
 echo
@@ -45,38 +45,39 @@ echo
   fi
 echo
 
-#Com4
+#com4
 echo -e "Command 4: ${GREEN}update-grub ${NOCOLOR}"
 sudo update-grub2
 echo
 
-#Com5
+#com5
 echo -e "Command 5: ${GREEN}autoremove ${NOCOLOR}"
 sudo apt-get autoremove
 echo
 
-#Com6
+#com6
 echo -e "Command 6: ${GREEN}autoclean ${NOCOLOR}"
 sudo apt-get autoclean
 echo
 
-#Com7
+#com7
 echo -e "Command 7: ${GREEN}empty trash ${NOCOLOR}"
 sudo trash-empty
 echo
 
-#Com8
+#com8
 echo -e "Command 8: ${GREEN}clean ${NOCOLOR}"
 sudo apt-get clean
 echo
 
-#done and done
-echo -e "      Done ${GREEN}and Done. >>> All Systems Go. ${NOCOLOR}"
-sleep 2
+#done
+echo -e "      Done ${GREEN}and Done.${NOCOLOR} >>> ${RED}All Systems Go. ${NOCOLOR}"
 echo
+echo
+sleep 1.5
+
 
 #return prompt
 echo -e "           ${GREEN}Here's your prompt.. ${NOCOLOR}"
-sleep 1
+sleep 0.5
 echo
-
