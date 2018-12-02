@@ -19,7 +19,19 @@ echo "#  and do clean-up afterwards.  #"
 echo "#  Made with/for Linux Mint 18  #"
 echo "#  Will work for other distros  #"
 echo "#################################"
-
+echo
+sleep 0.5
+echo "Commands include: -update" 
+echo "                  -upgrade"
+echo "                  -dist-upgrade"
+echo "                  -update-grub"
+echo "                  -autoremove"
+echo "                  -autoclean" 
+echo "                  -empty-trash"
+echo "                  -and clean  (in that order)"
+echo
+echo "                  'dist-upgrade' will prompt user (y/n)"
+echo
 sleep 0.5
 echo 
 read -n 1 -s -p "Press any key to continue.. "
@@ -73,7 +85,7 @@ sudo apt-get clean
 echo
 
 #done
-echo -e "${BOLD}      Done ${GREEN}and Done.${NOCOLOR} >>> ${RED}All Systems Go. ${NOCOLOR}"
+echo -e "${BOLD}      Done ${GREEN}and Done.${NOCOLOR} >>> ${BOLD}All Systems Go. ${NOCOLOR}"
 echo
 echo
 sleep 1.5
