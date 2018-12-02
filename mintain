@@ -13,12 +13,14 @@ BOLD="\033[1m"
 
 clear
 echo 
-echo "#################################"
-echo "#  Maintain your linux system   #"
-echo "#  and do clean-up afterwards.  #"
-echo "#  Made with/for Linux Mint 18  #"
-echo "#  Will work for other distros  #"
-echo "#################################"
+echo "#######################################"
+echo "#  Bash script for Linux maintenance  #"
+echo "#  Updates, upgrades, and cleans-up.  #"
+echo "#  Made with Linux Mint 18 (sarah)    #"
+echo "#  Will work for many other distros   #"
+echo "#######################################"
+
+
 echo
 sleep 0.5
 echo "Commands include: -update" 
