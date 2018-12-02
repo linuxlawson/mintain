@@ -31,14 +31,16 @@ echo "                  -empty-trash"
 echo "                  -and clean  (in that order)"
 echo
 echo "                  'dist-upgrade' will prompt user (y/n)"
-echo
+echo "                  option to update again IF upgrades were available (prompts)"
 sleep 0.5
+echo
 echo 
 read -n 1 -s -p "Press any key to continue.. "
 clear
 
 
 #com1
+echo
 echo -e "${BOLD}Command 1: ${GREEN}update ${NOCOLOR}"
 sudo apt-get update
 echo
@@ -49,13 +51,25 @@ sudo apt-get upgrade
 echo
 
 #com3
-echo -e "${BOLD}Command 3: ${GREEN}dist-upgrade  (abort if not sure) ${NOCOLOR}"
+echo -e "${BOLD}Command 3: ${GREEN}dist-upgrade  (skip if not sure) ${NOCOLOR}"
 
 read -p "           Run dist-upgrade? (y/n) " -n 1 -r
 echo
   if [[ $REPLY =~ ^[Yy]$ ]]
   then
   sudo apt-get dist-upgrade
+  fi
+echo
+
+#option to update again, after upgrades (if upgrades were available)
+#repeat1
+echo -e "${BOLD}Re-update: ${GREEN}If upgrades were available.. ${NOCOLOR}"
+
+read -p "           update again? (y/n) " -n 1 -r
+echo
+  if [[ $REPLY =~ ^[Yy]$ ]]
+  then
+  sudo apt-get update
   fi
 echo
 
