@@ -7,6 +7,6 @@ Commands: update, upgrade, dist-upgrade, update-grub, autoremove, autoclean, emp
 Choosing 'n' (no) will simply skip over this command and continue with rest of program.  
 
 Added: -option to update again, IF upgrades were available (prompts)  
-              -timer  
+        -timer  
          
          
