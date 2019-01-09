@@ -28,7 +28,7 @@ echo "#######################################"
 
 
 echo
-sleep 0.5
+sleep 0.2
 echo "Commands include: -update" 
 echo "                  -upgrade"
 echo "                  -dist-upgrade"
@@ -72,7 +72,7 @@ echo
 echo
 
 #re-update
-echo -e "${BOLD}Re-update: ${YELLOW}If upgrades were available.. ${NOCOLOR}"
+echo -e "${BOLD}Re-update: ${YELLOW}If upgrades were available, ${NOCOLOR}"
 read -p "           update again? (y/n) " -n 1 -r
 echo
   if [[ $REPLY =~ ^[Yy]$ ]]
@@ -113,7 +113,8 @@ sleep 0.5
 
 #endTimer
 end=$SECONDS
-echo "      Time elapsed: $((end-start)) seconds."
+echo -e "${BOLD}      Time ${YELLOW}elapsed:${NOCOLOR} ${BOLD}$((end-start)) seconds. ${NOCOLOR}"
+echo
 echo
 sleep 0.5
 
