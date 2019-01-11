@@ -3,7 +3,7 @@
 # Commands include: update, upgrade, dist-upgrade, update-grub, autoremove, autoclean, 
 #                   empty-trash, clean.
 # dist-upgrade will prompt (y/n), skip if not sure.
-
+# version 2.0
 
 BOLD="\033[1m"
 NOCOLOR="\033[0m"
@@ -40,7 +40,7 @@ echo "                  -and clean  (in that order)"
 echo
 echo "                  'dist-upgrade' will prompt (y/n)"
 echo "                  option to update again IF upgrades were available (prompts)"
-sleep 0.5
+sleep 0.4
 echo
 echo 
 read -n 1 -s -p "Press any key to continue.. "
@@ -62,8 +62,7 @@ sudo apt-get upgrade
 echo
 
 #com3
-echo -e "${BOLD}Command 3: ${YELLOW}dist-upgrade  (skip if not sure) ${NOCOLOR}"
-read -p "           Run dist-upgrade? (y/n) " -n 1 -r
+read -p "$(echo -e Command 3:$BOLD$YELLOW" dist-upgrade? (y/n) "$NOCOLOR)" -n 1 -r
 echo
   if [[ $REPLY =~ ^[Yy]$ ]]
   then
@@ -72,8 +71,7 @@ echo
 echo
 
 #re-update
-echo -e "${BOLD}Re-update: ${YELLOW}If upgrades were available, ${NOCOLOR}"
-read -p "           update again? (y/n) " -n 1 -r
+read -p "$(echo -e Re-update:$BOLD$YELLOW" update again? (y/n) "$NOCOLOR)" -n 1 -r
 echo
   if [[ $REPLY =~ ^[Yy]$ ]]
   then
