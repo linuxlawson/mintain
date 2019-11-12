@@ -23,7 +23,7 @@ echo "#######################################"
 echo "#  Bash script for Linux maintenance  #"
 echo "#  Updates, upgrades, and cleans-up.  #"
 echo "#  Made with Linux Mint 18  (sarah)   #"
-echo "#  Will work for many other distros   #"
+echo "#  Will work for most linux systems   #"
 echo "#######################################"
 
 
@@ -35,8 +35,8 @@ echo "                  -dist-upgrade"
 echo "                  -update-grub"
 echo "                  -autoremove"
 echo "                  -autoclean" 
-echo "                  -empty-trash"
-echo "                  -and clean  (in that order)"
+#echo "                  -empty-trash"
+echo "                  -clean  (in that order)"
 echo
 echo "                  'dist-upgrade' will prompt (y/n)"
 echo "                  option to update again IF upgrades were available (prompts)"
@@ -94,12 +94,12 @@ echo -e "${BOLD}Command 6: ${YELLOW}autoclean ${NOCOLOR}"
 sudo apt-get autoclean
 echo
 
-#com7
-echo -e "${BOLD}Command 7: ${YELLOW}empty trash ${NOCOLOR}"
-sudo trash-empty
-echo
+#com7 (only works with Trash-cli installed)
+#echo -e "${BOLD}Command 7: ${YELLOW}empty trash ${NOCOLOR}"
+#sudo trash-empty
+#echo
 
-#com8
+#com7
 echo -e "${BOLD}Command 8: ${YELLOW}clean ${NOCOLOR}"
 sudo apt-get clean
 echo
