@@ -1,5 +1,5 @@
 # mintain
-Small bash script for linux maintenance.
+Small bash script for linux maintenance (cli)
 
 Commands include: update, upgrade, dist-upgrade, update-grub, autoremove, autoclean, and clean.
 
