@@ -11,7 +11,7 @@ Added:
   * Timer  
  
    
-   Update: Commented out (removed) 'trash-empty' command as it only work with 'trash-cli' installed.  
+   Update: Removed 'trash-empty' command as it only work with 'trash-cli' installed.  
    
          
          
