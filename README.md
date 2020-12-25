@@ -9,6 +9,7 @@ Choosing 'n' (no) will simply skip over this command and continue with rest of p
 Added:  
   * Option to update again, 'IF' upgrades were available (prompts)  
   * Timer  
+  
  
    
    Update: Removed 'trash-empty' command as it only work with 'trash-cli' installed.  
