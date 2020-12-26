@@ -1,5 +1,7 @@
 # mintain
-Small bash script for linux maintenance
+Small bash script for linux maintenance  
+
+Enables linux users to do basic maintenance all at once, quickly and easily.
 
 Commands include: update, upgrade, dist-upgrade, update-grub, autoremove, autoclean, and clean.
 
@@ -13,6 +15,8 @@ Added:
  
    
    Update: Removed 'trash-empty' command as it only work with 'trash-cli' installed.  
+   
+   
    
          
          
