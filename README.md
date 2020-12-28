@@ -12,9 +12,9 @@ Added:
   * Option to update again, 'IF' upgrades were available (prompts)  
   * Timer  
   
- 
+ <br>
    
-   Update: Removed 'trash-empty' command as it only work with 'trash-cli' installed.  
+   Update: Removed 'trash-empty' command as it only works with 'trash-cli' installed.  
    
    
    
