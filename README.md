@@ -1,5 +1,5 @@
 # mintain
-Small bash script for linux maintenance  
+Small bash script for linux maintenance  (CLI of course)
 
 Enables linux users to do basic maintenance all at once, quickly and easily.
 
