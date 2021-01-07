@@ -1,17 +1,13 @@
 #!/bin/bash
-#David Lawson 2019
-
-# Mintain - Small bash script for Linux maintenance (updating and cleaning).
-# Commands include: update, upgrade, dist-upgrade, update-grub, autoremove, autoclean, empty-trash, clean.
-# dist-upgrade will prompt (y/n), skip if unsure.
-# version 2.0
+# Mintain - Linux maintenance script
+# David Lawson
 
 BOLD="\033[1m"
 NOCOLOR="\033[0m"
 
 RED="\033[1;31m"
 GREEN="\033[1;32m"
-YELLOW="\033[1;33m" #*_*
+YELLOW="\033[1;33m"
 
 LIGHTRED="\033[1;91m"
 LIGHTYELLOW="\033[1;92m"
@@ -100,7 +96,7 @@ echo
 #sudo trash-empty
 #echo
 
-#com7
+#com8
 echo -e "${BOLD}Command 8: ${YELLOW}clean ${NOCOLOR}"
 sudo apt-get clean
 echo
