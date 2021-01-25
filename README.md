@@ -9,7 +9,7 @@ Commands include: update, upgrade, dist-upgrade, update-grub, autoremove, autocl
 Choosing 'n' (no) will simply skip over this command and continue with rest of program.  
 
 Added:  
-  * Option to update again, 'IF' upgrades were available (prompts)  
+  * Option to update again, 'IF' upgrades were available (will prompt)  
   * Timer  
   
  <br>
