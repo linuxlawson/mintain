@@ -14,7 +14,7 @@ Added:
   
  <br>
    
-   Update: Removed 'trash-empty' command as it only works with 'trash-cli' installed.  
+   **Note:** Removed 'trash-empty' command as it only works with 'trash-cli' installed.  
      
    To make trash-empty work, install 'trash-cli' using:  
    ```sudo apt install trash-cli```    
