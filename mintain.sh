@@ -2,12 +2,11 @@
 # Mintain
 # Linux maintenance script
 
-BOLD="\033[1m"
-NOCOLOR="\033[0m"
-
-RED="\033[1;31m"
-GREEN="\033[1;32m"
-YELLOW="\033[1;33m"
+bold="\033[1m"
+nocolor="\033[0m"
+red="\033[1;31m"
+green="\033[1;32m"
+yellow="\033[1;33m"
 
 
 clear
@@ -42,20 +41,20 @@ clear
 
 #com1
 echo
-echo -e "${BOLD}Command 1: ${YELLOW}update ${NOCOLOR}"
+echo -e "${bold}Command 1: ${yellow}update ${nocolor}"
 sudo apt-get update
 echo
 
-#timer
+#start timer
 start=$SECONDS
 
 #com2
-echo -e "${BOLD}Command 2: ${YELLOW}upgrade ${NOCOLOR}"
+echo -e "${bold}Command 2: ${yellow}upgrade ${nocolor}"
 sudo apt-get upgrade
 echo
 
 #com3
-read -p "$(echo -e Command 3:$BOLD$YELLOW" dist-upgrade? (y/n) "$NOCOLOR)" -n 1 -r
+read -p "$(echo -e ${bold}Command 3:${yellow}" dist-upgrade? (y/n) "${nocolor})" -n 1 -r
 echo
   if [[ $REPLY =~ ^[Yy]$ ]]
   then
@@ -64,7 +63,7 @@ echo
 echo
 
 #re-update
-read -p "$(echo -e Re-update:$BOLD$YELLOW" update again? (y/n) "$NOCOLOR)" -n 1 -r
+read -p "$(echo -e ${bold}Re-update:${yellow}" update again? (y/n) "${nocolor})" -n 1 -r
 echo
   if [[ $REPLY =~ ^[Yy]$ ]]
   then
@@ -73,43 +72,43 @@ echo
 echo
 
 #com4
-echo -e "${BOLD}Command 4: ${YELLOW}update-grub ${NOCOLOR}"
+echo -e "${bold}Command 4: ${yellow}update-grub ${nocolor}"
 sudo update-grub
 echo
 
 #com5
-echo -e "${BOLD}Command 5: ${YELLOW}autoremove ${NOCOLOR}"
+echo -e "${bold}Command 5: ${yellow}autoremove ${nocolor}"
 sudo apt-get autoremove
 echo
 
 #com6
-echo -e "${BOLD}Command 6: ${YELLOW}autoclean ${NOCOLOR}"
+echo -e "${bold}Command 6: ${yellow}autoclean ${nocolor}"
 sudo apt-get autoclean
 echo
 
-#com7 (only works with Trash-cli installed)
-#echo -e "${BOLD}Command 7: ${YELLOW}empty trash ${NOCOLOR}"
+#com7 (only works with trash-cli installed)
+#echo -e "${bold}Command 7: ${yellow}empty trash ${nocolor}"
 #sudo trash-empty
 #echo
 
 #com8
-echo -e "${BOLD}Command 8: ${YELLOW}clean ${NOCOLOR}"
+echo -e "${bold}Command 8: ${yellow}clean ${nocolor}"
 sudo apt-get clean
 echo
 
 #done
-echo -e "${BOLD}      Done ${YELLOW}and Done.${NOCOLOR} >>> ${BOLD}All Systems Go. ${NOCOLOR}"
+echo -e "${bold}      Done ${yellow}and Done.${nocolor} >>> ${bold}All Systems Go. ${nocolor}"
 echo
 sleep 0.5
 
-#endTimer
+#end timer
 end=$SECONDS
-echo -e "${BOLD}      Time ${YELLOW}elapsed:${RED} ${BOLD}$((end-start)) seconds. ${NOCOLOR}"
+echo -e "${bold}      Time ${yellow}elapsed:${red} $((end-start)) seconds. ${nocolor}"
 echo
 echo
 sleep 0.5
 
 #return prompt
-echo -e "           ${YELLOW}Here's your prompt.. ${NOCOLOR}"
+echo -e "           ${yellow}Here's your prompt.. ${nocolor}"
 sleep 0.2
 echo
