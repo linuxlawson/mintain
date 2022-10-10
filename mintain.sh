@@ -27,7 +27,7 @@ echo -e "\t\t  -dist-upgrade"
 echo -e "\t\t  -update-grub"
 echo -e "\t\t  -autoremove"
 echo -e "\t\t  -autoclean" 
-echo -e "\t\t  -empty-trash"
+#echo -e "\t\t  -empty-trash"
 echo -e "\t\t  -clean  (in that order)"
 echo
 echo -e "\t\t  'dist-upgrade' will prompt (y/n)"
