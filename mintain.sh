@@ -13,7 +13,7 @@ clear
 echo 
 echo "#######################################"
 echo "#  Bash script for Linux maintenance  #"
-echo "#  Updates, upgrades, and cleans-up.  #"
+echo "#  Updates, upgrades, and cleans up.  #"
 echo "#  Made with Linux Mint 18  (sarah)   #"
 echo "#  Will work for most linux systems   #"
 echo "#######################################"
@@ -22,16 +22,16 @@ echo "#######################################"
 echo
 sleep 0.2
 echo "Commands include: -update" 
-echo "                  -upgrade"
-echo "                  -dist-upgrade"
-echo "                  -update-grub"
-echo "                  -autoremove"
-echo "                  -autoclean" 
-#echo "                  -empty-trash"
-echo "                  -clean  (in that order)"
+echo -e "\t\t  -upgrade"
+echo -e "\t\t  -dist-upgrade"
+echo -e "\t\t  -update-grub"
+echo -e "\t\t  -autoremove"
+echo -e "\t\t  -autoclean" 
+echo -e "\t\t  -empty-trash"
+echo -e "\t\t  -clean  (in that order)"
 echo
-echo "                  'dist-upgrade' will prompt (y/n)"
-echo "                  option to update again IF upgrades were available (prompts)"
+echo -e "\t\t  'dist-upgrade' will prompt (y/n)"
+echo -e "\t\t  option to update again IF upgrades were available (prompts)"
 sleep 0.2
 echo
 echo 
@@ -87,9 +87,8 @@ sudo apt-get autoclean
 echo
 
 #com7 (only works with trash-cli installed)
-#echo -e "${bold}Command 7: ${yellow}empty trash ${nocolor}"
-#sudo trash-empty
-#echo
+#echo -e "${bold}Command 7: ${yellow}empty trash${nocolor}"
+#trash-empty && echo -e "" || echo -e "Skipped. trash-cli not installed\n"
 
 #com8
 echo -e "${bold}Command 8: ${yellow}clean ${nocolor}"
