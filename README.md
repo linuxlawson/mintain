@@ -19,7 +19,15 @@ Added:
    To make trash-empty work, install 'trash-cli' using:  
    ```sudo apt install trash-cli```    
    
-   Also, uncomment command 7 (lines 78,79) and also line 27.
+   Also, uncomment command 7 (lines 78,79) and also line 27. 
+   
+   <br>
+   
+   **Another Note:** The easiest way to run this is to make an alias, and put it in your .bashrc file.
+   
+   `alias mintain="~/bin/bash/mintain.sh"`  
+   
+   Then you can run it straight from terminal without navigating to it.
    
    
          
