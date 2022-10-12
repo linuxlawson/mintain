@@ -19,7 +19,7 @@ Added:
    To make trash-empty work, install 'trash-cli' using:  
    ```sudo apt install trash-cli```    
    
-   Also, uncomment command 7 (lines 90,91) and also line 30.
+   Also, uncomment command 7 (lines 78,79) and also line 27.
    
    
          
