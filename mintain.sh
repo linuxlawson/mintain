@@ -9,89 +9,100 @@ green="\033[1;32m"
 yellow="\033[1;33m"
 
 clear
-echo -e "\n#######################################"
-echo "#  Bash script for Linux maintenance  #"
-echo "#  Updates, upgrades, and cleans up.  #"
-echo "#  Made with Linux Mint 18  (sarah)   #"
-echo "#  Will work for most linux systems   #"
-echo -e "#######################################\n"
+printf "
+#######################################
+#  Bash script for Linux maintenance  #
+#  Updates, upgrades, and cleans up.  #
+#  Made with Linux Mint 18  (sarah)   #
+#  Will work with most linux systems  #
+#######################################
+"
 
+printf " 
+Commands include: -update 
+\t\t  -upgrade
+\t\t  -dist-upgrade
+\t\t  -update-grub
+\t\t  -autoremove
+\t\t  -autoclean 
+\t\t  -empty-trash
+\t\t  -clean 
+\t\t  'dist-upgrade' will prompt (y/n)
+\t\t   option to update again IF upgrades exist (prompts)\n\n
+"
 
-sleep 0.2
-echo "Commands include: -update" 
-echo -e "\t\t  -upgrade"
-echo -e "\t\t  -dist-upgrade"
-echo -e "\t\t  -update-grub"
-echo -e "\t\t  -autoremove"
-echo -e "\t\t  -autoclean" 
-#echo -e "\t\t  -empty-trash"
-echo -e "\t\t  -clean  (in that order)\n"
-echo -e "\t\t  'dist-upgrade' will prompt (y/n)"
-echo -e "\t\t  option to update again IF upgrades were available (prompts)\n\n"
-sleep 0.2
 read -n 1 -s -p "Press any key to continue.. "
 clear
 
 
 #com1
-echo -e "\n${bold}Command 1: ${yellow}update ${nocolor}"
-sudo apt-get update && echo ""
+printf "\n${bold}Command 1: ${yellow}update ${nocolor}\n"
+sudo apt-get update && printf "\n"
 
 #start timer
 start=$SECONDS
 
 #com2
-echo -e "${bold}Command 2: ${yellow}upgrade ${nocolor}"
-sudo apt-get upgrade && echo ""
+printf "${bold}Command 2: ${yellow}upgrade ${nocolor}\n"
+sudo apt-get upgrade && printf "\n"
 
 #com3
-read -p "$(echo -e ${bold}Command 3:${yellow}" dist-upgrade? (y/n) "${nocolor})" -n 1 -r
-echo
+read -p "$(printf ${bold}"Command 3:"${yellow}" dist-upgrade? (y/n) "${nocolor})" -n 1 -r
+printf "\n"
     if [[ $REPLY =~ ^[Yy]$ ]]
     then
     sudo apt-get dist-upgrade
     fi
-echo
+printf "\n"
 
 #re-update
-read -p "$(echo -e ${bold}Re-update:${yellow}" update again? (y/n) "${nocolor})" -n 1 -r
-echo
+read -p "$(printf ${bold}"Re-update:"${yellow}" update again? (y/n) "${nocolor})" -n 1 -r
+printf "\n"
     if [[ $REPLY =~ ^[Yy]$ ]]
     then
     sudo apt-get update
     fi
-echo
+printf "\n"
 
 #com4
-echo -e "${bold}Command 4: ${yellow}update-grub ${nocolor}"
-sudo update-grub && echo ""
+printf "${bold}Command 4: ${yellow}update-grub ${nocolor}\n"
+sudo update-grub && printf "\n"
 
 #com5
-echo -e "${bold}Command 5: ${yellow}autoremove ${nocolor}"
-sudo apt-get autoremove && echo ""
+printf "${bold}Command 5: ${yellow}autoremove ${nocolor}\n"
+sudo apt-get autoremove && printf "\n"
 
 #com6
-echo -e "${bold}Command 6: ${yellow}autoclean ${nocolor}"
-sudo apt-get autoclean && echo ""
+printf "${bold}Command 6: ${yellow}autoclean ${nocolor}\n"
+sudo apt-get autoclean && printf "\n"
 
-#com7 (only works with trash-cli installed)
-#echo -e "${bold}Command 7: ${yellow}empty trash${nocolor}"
-#trash-empty && echo -e "" || echo -e "Skipped. trash-cli not installed\n"
+#com7-trash
+read -p "$(printf ${bold}"Command 7:"${yellow}" empty trash? (y/n) "${nocolor})" -n 1 -r
+printf "\n"
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+    trash-empty && printf "" || printf "Skipped. trash-cli not installed\n"
+    printf "Done\n"
+    fi
+printf "\n"
 
 #com8
-echo -e "${bold}Command 8: ${yellow}clean ${nocolor}"
-sudo apt-get clean && echo ""
+printf "${bold}Command 8: ${yellow}clean ${nocolor}\n"
+sudo apt-get clean && printf "\n"
 
 #done
-echo -e "${bold}      Done ${yellow}and Done.${nocolor} >>> ${bold}All Systems Go. ${nocolor}\n"
+pad="     "
+printf "$pad ${bold}Done ${yellow}and Done.${nocolor} >>> ${bold}All Systems Go ${nocolor}\n\n"
 sleep 0.5
 
 #end timer
 end=$SECONDS
-echo -e "${bold}      Time ${yellow}elapsed:${red} $((end-start)) seconds. ${nocolor}\n\n"
+printf "$pad ${bold}Time ${yellow}elapsed:${red} $((end-start)) seconds ${nocolor}\n\n\n"
 sleep 0.5
 
+
 #return prompt
-echo -e "${yellow}           Here's your prompt.. ${nocolor}\n"
+padd="          "
+printf "$padd ${yellow}Here's your prompt.. ${nocolor}\n\n"
 sleep 0.2
 
