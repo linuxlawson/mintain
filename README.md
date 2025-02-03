@@ -1,4 +1,7 @@
-# mintain
+# mintain  
+
+**Updated** to use printf rather than echo  (2/3/25)   
+
 Small bash script for linux maintenance  (CLI of course)
 
 Enables linux users to do basic maintenance all at once, quickly and easily.
