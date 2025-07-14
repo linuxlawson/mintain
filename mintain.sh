@@ -39,12 +39,15 @@ clear
 printf "\n${bold}Command 1: ${yellow}update ${nocolor}\n"
 sudo apt-get update && printf "\n"
 
+
 #start timer
 start=$SECONDS
+
 
 #com2- upgrade
 printf "${bold}Command 2: ${yellow}upgrade ${nocolor}\n"
 sudo apt-get upgrade && printf "\n"
+
 
 #com3- dist-upgrade
 read -p "$(printf ${bold}"Command 3:"${yellow}" dist-upgrade? (y/n) "${nocolor})" -n 1 -r
@@ -55,6 +58,7 @@ printf "\n"
     fi
 printf "\n"
 
+
 #re-update
 read -p "$(printf ${bold}"Re-update:"${yellow}" update again? (y/n) "${nocolor})" -n 1 -r
 printf "\n"
@@ -64,17 +68,21 @@ printf "\n"
     fi
 printf "\n"
 
+
 #com4- update-grub
 printf "${bold}Command 4: ${yellow}update-grub ${nocolor}\n"
 sudo update-grub && printf "\n"
+
 
 #com5- autoremove
 printf "${bold}Command 5: ${yellow}autoremove ${nocolor}\n"
 sudo apt-get autoremove && printf "\n"
 
+
 #com6- autoclean
 printf "${bold}Command 6: ${yellow}autoclean ${nocolor}\n"
 sudo apt-get autoclean && printf "\n"
+
 
 #com7- empty-trash
 read -p "$(printf ${bold}"Command 7:"${yellow}" empty trash? (y/n) "${nocolor})" -n 1 -r
@@ -92,15 +100,18 @@ printf "${bold}Command 8: ${yellow}clean ${nocolor}\n"
 sudo apt-get clean && printf "\n"
 sleep 0.5
 
+
 #done
 pad="     "
-printf "$pad ${bold}Done ${yellow}and Done${nocolor}" ;  printf " >>> "; sleep 1 ; printf "${bold}All Systems Go ${nocolor}\n\n"
+printf "$pad ${bold}Done ${yellow}and Done.${nocolor} >>> ${bold}All Systems Go ${nocolor}\n\n"
 sleep 0.5
+
 
 #end timer
 end=$SECONDS
 printf "$pad ${bold}Time ${yellow}elapsed:${red} $((end-start)) seconds ${nocolor}\n\n\n"
 sleep 0.2
+
 
 #return prompt
 padd="          "
